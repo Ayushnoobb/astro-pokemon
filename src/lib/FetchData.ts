@@ -16,7 +16,7 @@ export async function fetchPage(offset: number) {
     return {
       name: pokemonDetail.name,
       url: pokemonDetail.sprites.front_default,
-      types:pokemonDetail.types // You can modify this based on the specific sprite URL you need
+      types:pokemonDetail.types
     };
   });
 
