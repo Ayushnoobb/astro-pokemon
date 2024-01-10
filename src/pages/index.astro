@@ -1,0 +1,39 @@
+---
+
+import Pokemon from "../components/pokemon";
+import "../style/index.css";
+import "../style/component.css"
+import "../style/pokemon.css"
+
+---
+
+
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Pokemon | Dex</title>
+
+
+	</head>
+	<body>
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="container--inner">
+						<h1 class="header__intro">Pokedex</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<Pokemon client:only="react" />
+			</div>
+		</main>
+	</body>
+</html>
