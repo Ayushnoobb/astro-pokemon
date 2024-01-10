@@ -14,14 +14,24 @@ Ensure that you have the following installed on your machine:
 1. **Open folder in vs code**
 
    ```bash
+   git clone https://github.com/Ayushnoobb/astro-pokemon.git
+
+This will download required files 
+
+2. **Open folder in vs code**
+
+   ```bash
    npm i
 
 This will install all the required dependencies to run this app
 
-2. **Run Command**
+3. **Run Command**
 
    ```bash
    npm run dev
 
 This will open server on port 4321
 -[http://localhost:4321/]
+
+
+Now we are good to go
