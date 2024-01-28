@@ -11,13 +11,14 @@
 .pokemon-list__column{
   width: 50%;
 }
-.pokemon-list__column:nth-of-type(2){
+.pokemon-list__filter-disclaimer{
 
   background-color: var(--c-green);
   padding: 2.5rem 1.5rem;
   border-radius: 0.7rem;
   font-size: 1.6rem;
   line-height: 20px;
+  margin-bottom: 2rem;
 }
 .pokemon-list__wrapper{
   background-color: var(--c-d-grey);
@@ -27,7 +28,7 @@
 
 .pokemon-list__filter-text{
   padding-left: 0.5rem;
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   margin-right: 0.5rem;
 }
 
@@ -55,18 +56,22 @@
   gap: 3rem;
 }
 .pokemon-list__list-individual{
+  max-width: 146.25px;
   width: calc(100% / 4 - 3rem);
   background-color: #f2f2f2;
   padding: 0.5rem;
   border-radius: 1rem;
+  flex-grow: 1;
 }
 .pokemon-list__list-individual img {
   width: 100%;
   height: auto;
 }
 .pokemon-list__name{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  padding: 5px 0;
   color: var(--c-black);
+  text-align: center;
 }
 
 .pokemon-list__types{
@@ -80,4 +85,8 @@
   border-radius: 1rem;
   font-size: 1.4rem;
   background-color: var(--c-white);
+}
+
+.pokemon-list__filter-disclaimer{
+  text-align: center;
 }

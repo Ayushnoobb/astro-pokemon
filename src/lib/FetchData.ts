@@ -5,7 +5,9 @@ export async function fetchPokemon(){
   return allPokemon.results;
 }
 
-export async function fetchPage(offset: number) {
+export async function fetchPage(pageParam:number) {
+  console.log(pageParam);
+  const offset = (pageParam)*20 < 0 ? 0 :(pageParam)*20 ;
   const jsonPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`);
   const allPokemon = await jsonPokemon.json();
 
@@ -24,3 +26,17 @@ export async function fetchPage(offset: number) {
 
   return pokemonDetails;
 }
+
+export const fetchPokemonByName = async (name: string) => {
+  console.log("by nmae")
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error('Failed to fetch Pokemon details');
+  }
+  return {
+    name:name,
+    url:data.sprites.front_default,
+    types:data.types
+  };
+};
